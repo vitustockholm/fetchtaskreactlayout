@@ -1,0 +1,161 @@
+/* Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Mobile */
+/* -- header */
+header .container {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 10px;
+}
+.containeris {
+  display: flex;
+}
+.nav {
+  list-style: none;
+  display: flex;
+  padding: 55px;
+  /* padding-left: 30px; */
+  margin-left: 60px;
+  gap: 25px;
+}
+/* header .container nav ul {
+  list-style: none;
+  display: flex;
+} */
+/* 
+header .container nav ul li {
+  padding: 0 5px;
+
+  cursor: pointer;
+} */
+
+/* -- main */
+/* main .container #products {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+} */
+
+/* main .container #products .product {
+  width: calc(100% / 3 - 10px);
+  padding: 15px;
+} */
+
+@media (min-width: 768px) {
+  .container {
+    background-color: aliceblue;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template: 1fr 5fr 1fr / 4fr 1fr;
+    gap: 10px;
+    grid-template-areas:
+      'logo nav'
+      'content content'
+      'footer footer';
+  }
+  /* https://hypeformat.com/wp-content/uploads/2020/10/hypeformat.com-black-logo-1.png */
+
+  /* Produktai turi būti pasiekiami naudojant REST API technologiją (detaliau, naudojama Woocommerce REST API): https://woocommerce.github.io/woocommerce-rest-api-docs/#introduction
+	
+Norint pasiekti prekes iš Hypeformat, Jums reikės	
+Consumer key: ck_b1787d23e087fc4487013614991d3f989cfbcea0
+Consumer secret: cs_7b76f2ecc8e2c66bcf53bc697f44062bd7d9cea6
+Norint pasiekti prekes iš PER4MMEDIA, Jums reikės
+Consumer key: ck_491a09079cd9b7678c4c09fbbab2bf55275b5797
+Consumer secret: cs_835582a4141ea2f3ac9800573066b48153aaeb34 */
+
+  /* headers: {
+  Authorization: 'Basic ' + btoa(`${consumer_key}:${consumer_secret}`),
+}, */
+
+  .logo {
+    background-color: antiquewhite;
+
+    grid-area: logo;
+  }
+  .products {
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px;
+  }
+  h2 {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  #hhh {
+    text-align: center;
+  }
+  .logo img {
+    width: 340px;
+    height: 175px;
+    border-radius: 3.9%;
+  }
+  .products img {
+    width: 340px;
+    height: 175px;
+    border-radius: 3.9%;
+  }
+  .header {
+    background-color: azure;
+    grid-area: header;
+  }
+  .nav {
+    grid-area: nav;
+    text-decoration: none;
+  }
+  .content {
+    background-color: blanchedalmond;
+    grid-area: content;
+  }
+
+  .foooter {
+    background-color: burlywood;
+    grid-area: footer;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+
+  .App-link {
+    color: #61dafb;
+  }
+
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
